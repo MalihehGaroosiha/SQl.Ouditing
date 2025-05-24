@@ -6,7 +6,7 @@ select * from  PCard3
 union
 select  Service_Area ,Account_Description , Creditor ,JV_Date as Journal_Date, JV_Reference as Journal_Reference  ,JV_Value as Total
 from PCard2
-
+--Making new table with the name of PCard
 create table PCard
  (Service_Area nvarchar(50)
  ,Account_Description nvarchar(50)
@@ -14,7 +14,7 @@ create table PCard
  ,Journal_Date date,
  Journal_Reference smallint
  ,Total float)
---Making new table with the name of PCard
+
 insert into PCard(Service_Area ,Account_Description , Creditor,Journal_Date 
  ,Journal_Reference,Total)
  select  Service_Area ,Account_Description , Creditor,Journal_Date 
